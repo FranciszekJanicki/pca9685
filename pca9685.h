@@ -16,8 +16,9 @@ pca9685_err_t pca9685_deinitialize(pca9685_t* pca9685);
 
 pca9685_err_t pca9685_send_software_reset_cmd(pca9685_t const* pca9685);
 
-pca9685_err_t
-pca9685_set_channel_compare(pca9685_t const* pca9685, pca9685_channel_t channel, uint16_t compare);
+pca9685_err_t pca9685_set_channel_compare(pca9685_t const* pca9685,
+                                          pca9685_channel_t channel,
+                                          uint16_t compare);
 pca9685_err_t pca9685_set_channel_min_compare(pca9685_t const* pca9685, pca9685_channel_t channel);
 pca9685_err_t pca9685_set_channel_max_compare(pca9685_t const* pca9685, pca9685_channel_t channel);
 
