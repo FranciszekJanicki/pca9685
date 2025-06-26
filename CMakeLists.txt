@@ -4,10 +4,8 @@ target_sources(pca9685 PRIVATE
     "pca9685.c"
 )
 
-target_include_directories(pca9685 PUBLIC 
-)
-
-target_link_libraries(pca9685 PUBLIC
+target_include_directories(pca9685 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(pca9685 PUBLIC
