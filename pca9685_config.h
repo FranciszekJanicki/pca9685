@@ -20,7 +20,7 @@ typedef struct {
     uint8_t reserved : 1;
     uint8_t address : 6;
     uint8_t : 1;
-} pca9685_dev_address_t;
+} pca9685_slave_address_t;
 
 typedef enum {
     PCA9685_COMMAND_SOFTWARE_RESET = 0b00000110,
