@@ -4,6 +4,10 @@
 #include "pca9685_config.h"
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 inline uint16_t pca9685_compare_to_pwm_on(uint16_t compare)
 {
     if (compare > PCA9685_MAX_COMPARE) {
@@ -29,5 +33,9 @@ inline uint8_t pca9865_channel_to_pwm_off_reg_address(pca9685_channel_t channel)
 {
     return PCA9685_REG_ADDRESS_PWM0_OFF_L + 4 * channel;
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // PCA9685_PCA9685_UTILITY_H

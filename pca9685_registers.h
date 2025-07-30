@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint8_t restart : 1;
     uint8_t extclk : 1;
@@ -64,5 +68,9 @@ typedef struct {
 typedef struct {
     uint8_t mode : 8;
 } pca9685_test_mode_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // PCA9685_PCA9685_REGISTERS_H

@@ -4,6 +4,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define PCA9685_MIN_FREQ_HZ 1526U
 #define PCA9685_MAX_FREQ_HZ 24U
 #define PCA9685_MIN_COMPARE 0U
@@ -94,5 +98,9 @@ typedef struct {
     pca9685_err_t (*bus_write_data)(void*, uint8_t, uint8_t const*, size_t);
     pca9685_err_t (*bus_read_data)(void*, uint8_t, uint8_t*, size_t);
 } pca9685_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // PCA9685_PCA9685_CONFIG_H

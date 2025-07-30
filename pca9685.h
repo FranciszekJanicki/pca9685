@@ -4,6 +4,10 @@
 #include "pca9685_config.h"
 #include "pca9685_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     pca9685_config_t config;
     pca9685_interface_t interface;
@@ -92,5 +96,9 @@ pca9685_err_t pca9685_get_test_mode_reg(pca9685_t const* pca9685,
                                         pca9685_test_mode_reg_t* reg);
 pca9685_err_t pca9685_set_test_mode_reg(pca9685_t const* pca9685,
                                         pca9685_test_mode_reg_t const* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // PCA9685_PCA9685_H
